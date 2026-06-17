@@ -1,0 +1,59 @@
+{
+  "updatedAt": "2026-05-03",
+  "complexes": [
+    {
+      "id": "gangdong-hyundai-001",
+      "name": "강동 현대홈타운",
+      "region": "강동구",
+      "regionId": "gangdong",
+      "areaM2": 84,
+      "recentPrice": 950000000,
+      "low12m": 910000000,
+      "high12m": 990000000,
+      "priceChange3y": 0.15,
+      "priceChange5y": 0.38,
+      "monthlyVolumeAvg": 5,
+      "leasePriceRate": 0.68,
+      "newSupply2y": 800,
+      "trades": [
+        { "date": "2026-04-20", "price": 950000000, "floor": 8 }
+      ]
+    },
+    {
+      "id": "mapo-raemian-001",
+      "name": "마포래미안푸르지오",
+      "region": "마포구",
+      "regionId": "mapo",
+      "areaM2": 84,
+      "recentPrice": 1250000000,
+      "low12m": 1150000000,
+      "high12m": 1350000000,
+      "priceChange3y": 0.23,
+      "priceChange5y": 0.45,
+      "monthlyVolumeAvg": 8,
+      "leasePriceRate": 0.62,
+      "newSupply2y": 450,
+      "trades": [
+        { "date": "2026-04-15", "price": 1250000000, "floor": 15 }
+      ]
+    },
+    {
+      "id": "pangyo-e-001",
+      "name": "판교 e편한세상",
+      "region": "성남시 분당구",
+      "regionId": "pangyo",
+      "areaM2": 84,
+      "recentPrice": 1380000000,
+      "low12m": 1300000000,
+      "high12m": 1450000000,
+      "priceChange3y": 0.18,
+      "priceChange5y": 0.52,
+      "monthlyVolumeAvg": 4,
+      "leasePriceRate": 0.58,
+      "newSupply2y": 1200,
+      "trades": [
+        { "date": "2026-04-10", "price": 1380000000, "floor": 12 }
+      ]
+    }
+  ]
+}

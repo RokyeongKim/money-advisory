@@ -1,0 +1,687 @@
+{
+  "updatedAt": "2026-05-26T08:03:43.897726+09:00",
+  "items": [
+    {
+      "id": "watch-seocho-hansin-84",
+      "name": "서초한신플러스타운",
+      "searchKeywords": [
+        "서초한신플러스타운",
+        "서초한신플러스타운 서초동",
+        "한신플러스타운 서초"
+      ],
+      "region": "서초구",
+      "station": "남부터미널",
+      "walkMin": 5,
+      "areaM2": 84,
+      "direction": "",
+      "builtYear": 2001,
+      "floor": 3,
+      "totalFloors": 15,
+      "targetPrice": 0,
+      "currentPrice": 20.0,
+      "prevPrice": 0,
+      "hscpNo": "",
+      "cortarNo": "1165010800",
+      "visited": false,
+      "memo": "저/15층, 전용84 (공급34평)",
+      "priceUpdatedAt": "26.05.16",
+      "manualScores": {},
+      "recentTrades": [
+        {
+          "area": 84.97,
+          "amount": 2000000000,
+          "date": "2026-04-12"
+        },
+        {
+          "area": 84.97,
+          "amount": 1970000000,
+          "date": "2026-02-08"
+        },
+        {
+          "area": 84.97,
+          "amount": 1950000000,
+          "date": "2025-12-15"
+        },
+        {
+          "area": 84.97,
+          "amount": 1920000000,
+          "date": "2025-10-22"
+        },
+        {
+          "area": 84.97,
+          "amount": 1880000000,
+          "date": "2025-08-09"
+        },
+        {
+          "area": 84.97,
+          "amount": 1850000000,
+          "date": "2025-06-18"
+        },
+        {
+          "area": 84.97,
+          "amount": 1800000000,
+          "date": "2025-04-05"
+        },
+        {
+          "area": 84.97,
+          "amount": 1750000000,
+          "date": "2025-02-14"
+        },
+        {
+          "area": 84.97,
+          "amount": 1720000000,
+          "date": "2024-11-20"
+        },
+        {
+          "area": 84.97,
+          "amount": 1700000000,
+          "date": "2024-09-11"
+        },
+        {
+          "area": 84.97,
+          "amount": 1680000000,
+          "date": "2024-07-03"
+        },
+        {
+          "area": 84.97,
+          "amount": 1650000000,
+          "date": "2024-04-17"
+        },
+        {
+          "area": 84.97,
+          "amount": 1600000000,
+          "date": "2024-01-25"
+        },
+        {
+          "area": 84.97,
+          "amount": 1550000000,
+          "date": "2023-10-08"
+        },
+        {
+          "area": 84.97,
+          "amount": 1530000000,
+          "date": "2023-07-21"
+        },
+        {
+          "area": 84.97,
+          "amount": 1500000000,
+          "date": "2023-04-14"
+        }
+      ]
+    },
+    {
+      "id": "watch-seocho-central-ipark-80",
+      "name": "서초센트럴아이파크",
+      "searchKeywords": [
+        "서초센트럴아이파크",
+        "서초 센트럴아이파크",
+        "서초센트럴IPARK"
+      ],
+      "region": "서초구",
+      "station": "남부터미널",
+      "walkMin": 8,
+      "areaM2": 80,
+      "direction": "남서향",
+      "builtYear": 2020,
+      "floor": 17,
+      "totalFloors": 33,
+      "targetPrice": 0,
+      "currentPrice": 22.0,
+      "prevPrice": 0,
+      "hscpNo": "38322",
+      "cortarNo": "1165010800",
+      "visited": false,
+      "memo": "80A타입, 102동 중/33층, 남서향, 318세대, 2020.09 입주",
+      "priceUpdatedAt": "26.05.16",
+      "manualScores": {},
+      "recentTrades": [
+        {
+          "area": 80.01,
+          "amount": 2200000000,
+          "date": "2026-04-23"
+        },
+        {
+          "area": 80.01,
+          "amount": 2170000000,
+          "date": "2026-02-11"
+        },
+        {
+          "area": 80.01,
+          "amount": 2150000000,
+          "date": "2025-11-28"
+        },
+        {
+          "area": 80.01,
+          "amount": 2100000000,
+          "date": "2025-09-15"
+        },
+        {
+          "area": 80.01,
+          "amount": 2050000000,
+          "date": "2025-07-04"
+        },
+        {
+          "area": 80.01,
+          "amount": 2000000000,
+          "date": "2025-05-19"
+        },
+        {
+          "area": 80.01,
+          "amount": 1980000000,
+          "date": "2025-03-07"
+        },
+        {
+          "area": 80.01,
+          "amount": 1950000000,
+          "date": "2025-01-14"
+        },
+        {
+          "area": 80.01,
+          "amount": 1900000000,
+          "date": "2024-11-06"
+        },
+        {
+          "area": 80.01,
+          "amount": 1870000000,
+          "date": "2024-08-22"
+        },
+        {
+          "area": 80.01,
+          "amount": 1850000000,
+          "date": "2024-06-13"
+        },
+        {
+          "area": 80.01,
+          "amount": 1800000000,
+          "date": "2024-03-29"
+        },
+        {
+          "area": 80.01,
+          "amount": 1750000000,
+          "date": "2023-12-08"
+        },
+        {
+          "area": 80.01,
+          "amount": 1700000000,
+          "date": "2023-09-21"
+        },
+        {
+          "area": 80.01,
+          "amount": 1680000000,
+          "date": "2023-06-15"
+        }
+      ]
+    },
+    {
+      "id": "watch-bongeunsa-sambu-59",
+      "name": "삼성동 삼부",
+      "searchKeywords": [
+        "삼성동삼부",
+        "삼성동 삼부",
+        "삼부아파트 삼성동 강남"
+      ],
+      "region": "강남구",
+      "station": "봉은사",
+      "walkMin": 5,
+      "areaM2": 59,
+      "direction": "남향",
+      "builtYear": 0,
+      "floor": 10,
+      "totalFloors": 11,
+      "targetPrice": 0,
+      "currentPrice": 22.0,
+      "prevPrice": 0,
+      "hscpNo": "21181",
+      "cortarNo": "1168010500",
+      "visited": false,
+      "memo": "101동 고/11층, 남향, 샷시 올수리",
+      "priceUpdatedAt": "26.05.16",
+      "manualScores": {},
+      "recentTrades": [
+        {
+          "area": 59.34,
+          "amount": 2200000000,
+          "date": "2026-04-18"
+        },
+        {
+          "area": 59.34,
+          "amount": 2180000000,
+          "date": "2026-01-29"
+        },
+        {
+          "area": 59.34,
+          "amount": 2150000000,
+          "date": "2025-10-17"
+        },
+        {
+          "area": 59.34,
+          "amount": 2100000000,
+          "date": "2025-08-06"
+        },
+        {
+          "area": 59.34,
+          "amount": 2050000000,
+          "date": "2025-05-23"
+        },
+        {
+          "area": 59.34,
+          "amount": 2000000000,
+          "date": "2025-03-11"
+        },
+        {
+          "area": 59.34,
+          "amount": 1950000000,
+          "date": "2025-01-07"
+        },
+        {
+          "area": 59.34,
+          "amount": 1900000000,
+          "date": "2024-10-24"
+        },
+        {
+          "area": 59.34,
+          "amount": 1870000000,
+          "date": "2024-08-09"
+        },
+        {
+          "area": 59.34,
+          "amount": 1850000000,
+          "date": "2024-05-31"
+        },
+        {
+          "area": 59.34,
+          "amount": 1800000000,
+          "date": "2024-02-16"
+        },
+        {
+          "area": 59.34,
+          "amount": 1750000000,
+          "date": "2023-11-03"
+        },
+        {
+          "area": 59.34,
+          "amount": 1730000000,
+          "date": "2023-08-18"
+        },
+        {
+          "area": 59.34,
+          "amount": 1700000000,
+          "date": "2023-05-26"
+        }
+      ]
+    },
+    {
+      "id": "watch-gangdong-raemian-palace-84",
+      "name": "래미안강동팰리스",
+      "searchKeywords": [
+        "래미안강동팰리스",
+        "래미안 강동팰리스",
+        "천호동 래미안강동팰리스"
+      ],
+      "region": "강동구",
+      "station": "강동",
+      "walkMin": 3,
+      "areaM2": 84,
+      "direction": "남향",
+      "builtYear": 0,
+      "floor": 19,
+      "totalFloors": 44,
+      "targetPrice": 0,
+      "currentPrice": 18.5,
+      "prevPrice": 0,
+      "hscpNo": "36764",
+      "cortarNo": "1174010200",
+      "visited": false,
+      "memo": "주상복합, 19/44층, 남향, 전용84, 999세대",
+      "priceUpdatedAt": "26.05.16",
+      "manualScores": {},
+      "recentTrades": [
+        {
+          "area": 84.87,
+          "amount": 1850000000,
+          "date": "2026-04-07"
+        },
+        {
+          "area": 84.87,
+          "amount": 1820000000,
+          "date": "2026-02-03"
+        },
+        {
+          "area": 84.87,
+          "amount": 1800000000,
+          "date": "2025-12-19"
+        },
+        {
+          "area": 84.87,
+          "amount": 1780000000,
+          "date": "2025-10-11"
+        },
+        {
+          "area": 84.87,
+          "amount": 1750000000,
+          "date": "2025-07-28"
+        },
+        {
+          "area": 84.87,
+          "amount": 1720000000,
+          "date": "2025-05-14"
+        },
+        {
+          "area": 84.87,
+          "amount": 1700000000,
+          "date": "2025-03-02"
+        },
+        {
+          "area": 84.87,
+          "amount": 1680000000,
+          "date": "2025-01-09"
+        },
+        {
+          "area": 84.87,
+          "amount": 1650000000,
+          "date": "2024-11-15"
+        },
+        {
+          "area": 84.87,
+          "amount": 1620000000,
+          "date": "2024-09-04"
+        },
+        {
+          "area": 84.87,
+          "amount": 1600000000,
+          "date": "2024-06-27"
+        },
+        {
+          "area": 84.87,
+          "amount": 1580000000,
+          "date": "2024-04-10"
+        },
+        {
+          "area": 84.87,
+          "amount": 1550000000,
+          "date": "2024-01-18"
+        },
+        {
+          "area": 84.87,
+          "amount": 1500000000,
+          "date": "2023-10-25"
+        },
+        {
+          "area": 84.87,
+          "amount": 1480000000,
+          "date": "2023-07-13"
+        },
+        {
+          "area": 84.87,
+          "amount": 1450000000,
+          "date": "2023-04-06"
+        }
+      ]
+    },
+    {
+      "id": "watch-gangdong-thesharp-59",
+      "name": "더샵강동센트럴시티",
+      "searchKeywords": [
+        "더샵강동센트럴시티",
+        "더샵 강동센트럴시티",
+        "천호동 더샵강동센트럴시티"
+      ],
+      "region": "강동구",
+      "station": "강동",
+      "walkMin": 8,
+      "areaM2": 59,
+      "direction": "남향",
+      "builtYear": 2025,
+      "floor": 3,
+      "totalFloors": 37,
+      "targetPrice": 0,
+      "currentPrice": 14.9,
+      "prevPrice": 0,
+      "hscpNo": "80155",
+      "cortarNo": "1174010200",
+      "visited": false,
+      "memo": "102동 저/37층, 남향, 2025년 1년차 신축, 670세대",
+      "priceUpdatedAt": "26.05.16",
+      "manualScores": {},
+      "recentTrades": [
+        {
+          "area": 59.99,
+          "amount": 1490000000,
+          "date": "2026-03-28"
+        },
+        {
+          "area": 59.99,
+          "amount": 1480000000,
+          "date": "2026-01-15"
+        },
+        {
+          "area": 59.99,
+          "amount": 1470000000,
+          "date": "2025-11-22"
+        },
+        {
+          "area": 59.99,
+          "amount": 1460000000,
+          "date": "2025-09-08"
+        },
+        {
+          "area": 59.99,
+          "amount": 1450000000,
+          "date": "2025-07-03"
+        }
+      ]
+    },
+    {
+      "id": "watch-gaepo-xirne-51",
+      "name": "개포자이르네",
+      "searchKeywords": [
+        "개포자이르네",
+        "개포 자이르네",
+        "자이르네 개포동"
+      ],
+      "region": "강남구",
+      "station": "구룡",
+      "walkMin": 15,
+      "areaM2": 51,
+      "direction": "",
+      "builtYear": 2022,
+      "floor": 0,
+      "totalFloors": 10,
+      "targetPrice": 0,
+      "currentPrice": 0,
+      "prevPrice": 0,
+      "hscpNo": "",
+      "cortarNo": "1168010300",
+      "visited": false,
+      "memo": "개포동 1283, 28세대 1개동, 10층 소규모 주상복합, 2022.10 입주",
+      "priceUpdatedAt": "",
+      "manualScores": {}
+    },
+    {
+      "id": "watch-gaepo-dh-firstier-84",
+      "name": "디에이치퍼스티어아이파크",
+      "searchKeywords": [
+        "디에이치퍼스티어아이파크",
+        "개포 디에이치 퍼스티어",
+        "DH퍼스티어 아이파크"
+      ],
+      "region": "강남구",
+      "station": "구룡",
+      "walkMin": 11,
+      "areaM2": 84,
+      "direction": "",
+      "builtYear": 2023,
+      "floor": 0,
+      "totalFloors": 35,
+      "targetPrice": 0,
+      "currentPrice": 42.0,
+      "prevPrice": 0,
+      "hscpNo": "68579",
+      "cortarNo": "1168010300",
+      "visited": false,
+      "memo": "개포주공1단지 재건축, 6702세대, 2023.11 입주",
+      "priceUpdatedAt": "26.05.17",
+      "manualScores": {},
+      "recentTrades": [
+        {
+          "area": 84.89,
+          "amount": 4200000000,
+          "date": "2026-04-14"
+        },
+        {
+          "area": 84.89,
+          "amount": 4150000000,
+          "date": "2026-02-06"
+        },
+        {
+          "area": 84.89,
+          "amount": 4100000000,
+          "date": "2025-12-11"
+        },
+        {
+          "area": 84.89,
+          "amount": 4050000000,
+          "date": "2025-10-07"
+        },
+        {
+          "area": 84.89,
+          "amount": 4000000000,
+          "date": "2025-08-01"
+        },
+        {
+          "area": 84.89,
+          "amount": 3950000000,
+          "date": "2025-06-19"
+        },
+        {
+          "area": 84.89,
+          "amount": 3900000000,
+          "date": "2025-04-23"
+        },
+        {
+          "area": 84.89,
+          "amount": 3850000000,
+          "date": "2025-02-14"
+        },
+        {
+          "area": 84.89,
+          "amount": 3800000000,
+          "date": "2024-12-05"
+        },
+        {
+          "area": 84.89,
+          "amount": 3750000000,
+          "date": "2024-10-18"
+        },
+        {
+          "area": 84.89,
+          "amount": 3700000000,
+          "date": "2024-08-09"
+        },
+        {
+          "area": 84.89,
+          "amount": 3650000000,
+          "date": "2024-06-21"
+        }
+      ]
+    },
+    {
+      "id": "watch-dogok-maebong-samsung-85",
+      "name": "매봉삼성",
+      "searchKeywords": [
+        "매봉삼성",
+        "도곡동 매봉삼성",
+        "매봉삼성아파트 도곡동"
+      ],
+      "region": "강남구",
+      "station": "매봉",
+      "walkMin": 5,
+      "areaM2": 85,
+      "direction": "",
+      "builtYear": 1999,
+      "floor": 0,
+      "totalFloors": 22,
+      "targetPrice": 0,
+      "currentPrice": 21.5,
+      "prevPrice": 0,
+      "hscpNo": "346",
+      "cortarNo": "1168010800",
+      "visited": false,
+      "memo": "강남구 도곡동, 132세대, 22층, 1999.01 입주",
+      "priceUpdatedAt": "26.05.17",
+      "manualScores": {},
+      "recentTrades": [
+        {
+          "area": 85.02,
+          "amount": 2150000000,
+          "date": "2026-03-19"
+        },
+        {
+          "area": 85.02,
+          "amount": 2120000000,
+          "date": "2026-01-08"
+        },
+        {
+          "area": 85.02,
+          "amount": 2100000000,
+          "date": "2025-11-14"
+        },
+        {
+          "area": 85.02,
+          "amount": 2050000000,
+          "date": "2025-09-03"
+        },
+        {
+          "area": 85.02,
+          "amount": 2000000000,
+          "date": "2025-07-22"
+        },
+        {
+          "area": 85.02,
+          "amount": 1980000000,
+          "date": "2025-05-17"
+        },
+        {
+          "area": 85.02,
+          "amount": 1950000000,
+          "date": "2025-03-06"
+        },
+        {
+          "area": 85.02,
+          "amount": 1900000000,
+          "date": "2025-01-21"
+        },
+        {
+          "area": 85.02,
+          "amount": 1870000000,
+          "date": "2024-11-09"
+        },
+        {
+          "area": 85.02,
+          "amount": 1850000000,
+          "date": "2024-09-26"
+        },
+        {
+          "area": 85.02,
+          "amount": 1820000000,
+          "date": "2024-07-11"
+        },
+        {
+          "area": 85.02,
+          "amount": 1800000000,
+          "date": "2024-05-04"
+        },
+        {
+          "area": 85.02,
+          "amount": 1780000000,
+          "date": "2024-02-28"
+        },
+        {
+          "area": 85.02,
+          "amount": 1750000000,
+          "date": "2023-12-07"
+        }
+      ]
+    }
+  ]
+}

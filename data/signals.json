@@ -1,0 +1,126 @@
+{
+  "updatedAt": "2026-05-05",
+  "regions": [
+    {
+      "id": "mapo",
+      "name": "마포구",
+      "signals": [
+        {
+          "type": "development",
+          "name": "용산-마포 연결 지하도로",
+          "stageIndex": 0,
+          "expectedCompletion": "2030-06",
+          "source": "수동"
+        },
+        {
+          "type": "commercial",
+          "name": "마포 복합쇼핑몰",
+          "stageIndex": 1,
+          "expectedCompletion": "2027-03",
+          "source": "수동"
+        }
+      ]
+    },
+    {
+      "id": "yongsan",
+      "name": "용산구",
+      "signals": [
+        {
+          "type": "development",
+          "name": "용산 국제업무지구",
+          "stageIndex": 2,
+          "expectedCompletion": "2030-12",
+          "source": "서울시"
+        },
+        {
+          "type": "transit",
+          "name": "GTX-B 용산역",
+          "stageIndex": 2,
+          "expectedCompletion": "2030-06",
+          "source": "국토부"
+        }
+      ]
+    },
+    {
+      "id": "seocho",
+      "name": "서초구",
+      "signals": [
+        {
+          "type": "reconstruction",
+          "name": "반포 주요 단지 재건축",
+          "stageIndex": 3,
+          "expectedCompletion": "2027-12",
+          "source": "수동"
+        }
+      ]
+    },
+    {
+      "id": "gangnam",
+      "name": "강남구",
+      "signals": [
+        {
+          "type": "reconstruction",
+          "name": "압구정·대치 재건축",
+          "stageIndex": 2,
+          "expectedCompletion": "2029-12",
+          "source": "수동"
+        },
+        {
+          "type": "transit",
+          "name": "GTX-A 수서역",
+          "stageIndex": 3,
+          "expectedCompletion": "2026-06",
+          "source": "국토부"
+        }
+      ]
+    },
+    {
+      "id": "songpa",
+      "name": "송파구",
+      "signals": [
+        {
+          "type": "reconstruction",
+          "name": "잠실 MICE 복합개발",
+          "stageIndex": 1,
+          "expectedCompletion": "2030-12",
+          "source": "서울시"
+        },
+        {
+          "type": "commercial",
+          "name": "잠실 스타필드",
+          "stageIndex": 3,
+          "expectedCompletion": "2027-06",
+          "source": "수동"
+        }
+      ]
+    },
+    {
+      "id": "bundang",
+      "name": "분당구",
+      "note": "삼평·판교·이매·서현·수내·정자·백현동 중심",
+      "signals": [
+        {
+          "type": "corporate",
+          "name": "대기업 R&D센터 입주",
+          "stageIndex": 1,
+          "expectedCompletion": "2026-12",
+          "source": "수동"
+        },
+        {
+          "type": "transit",
+          "name": "신분당선 연장",
+          "stageIndex": 2,
+          "expectedCompletion": "2028-06",
+          "source": "국토부"
+        },
+        {
+          "type": "development",
+          "name": "판교3테크노밸리",
+          "stageIndex": 2,
+          "expectedCompletion": "2027-12",
+          "source": "수동"
+        }
+      ]
+    }
+  ]
+}

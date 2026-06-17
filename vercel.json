@@ -1,0 +1,11 @@
+{
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "framework": null,
+  "trailingSlash": false,
+  "functions": {
+    "api/stock-price.js": {
+      "maxDuration": 10
+    }
+  }
+}

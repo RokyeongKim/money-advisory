@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Advisory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+
+  <!-- ── 상단 탭바 (고정) ─────────────────────────────────────── -->
+  <div class="sticky top-0 z-20 bg-gray-950 border-b border-gray-800 px-4 pt-3 pb-0">
+    <div class="max-w-3xl mx-auto flex items-center gap-1">
+      <button data-tab="assets" class="main-tab flex-1 py-2.5 text-sm font-semibold rounded-t-lg transition-colors text-gray-400 hover:text-white">
+        🏦 자산현황
+      </button>
+      <button data-tab="spend" class="main-tab flex-1 py-2.5 text-sm font-semibold rounded-t-lg transition-colors text-gray-400 hover:text-white">
+        💸 씨앗모으기
+      </button>
+      <button data-tab="grow" class="main-tab flex-1 py-2.5 text-sm font-semibold rounded-t-lg transition-colors text-gray-400 hover:text-white">
+        📈 씨앗불리기
+      </button>
+      <button id="btn-settings-toggle" class="ml-2 px-3 py-2 text-gray-400 hover:text-white text-lg transition-colors" title="설정">⚙️</button>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-4 pt-4 pb-12">
+
+    <!-- ── 첫 방문 안내 배너 (포트폴리오 미설정 시) ───────────────────────────── -->
+    <div id="onboarding-banner" class="hidden mb-4">
+      <div class="bg-blue-900/40 border border-blue-700 rounded-2xl p-4 flex items-start gap-3">
+        <div class="text-2xl flex-shrink-0">👋</div>
+        <div>
+          <div class="text-sm font-semibold text-blue-200 mb-1">처음 오셨군요!</div>
+          <div class="text-xs text-gray-300 mb-3">우측 상단 <span class="text-white font-bold">⚙️ 설정</span> 버튼을 눌러 내 주식·자산을 입력하면 대시보드가 채워집니다.</div>
+          <button onclick="document.getElementById('onboarding-banner').classList.add('hidden'); document.getElementById('settings-panel').classList.remove('hidden'); document.getElementById('btn-settings-toggle').scrollIntoView({behavior:'smooth'})"
+            class="text-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg transition-colors">
+            지금 설정하기
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 설정 패널 (숨김 기본) ───────────────────────────────── -->
+    <div id="settings-panel" class="hidden mb-6">
+      <div class="bg-gray-900 border border-gray-700 rounded-2xl p-5">
+        <h2 class="text-base font-bold text-gray-200 mb-4">⚙️ 설정 및 데이터</h2>
+        <div id="portfolio-management" class="mb-6"></div>
+        <div id="settings-form"></div>
+        <div id="quit-simulator" class="mt-6"></div>
+        <div id="csv-upload" class="mt-4"></div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════
+         TAB 1: 자산현황
+    ══════════════════════════════════════════════════════════ -->
+    <div id="tab-assets">
+
+      <!-- 재무유지가능기간 시뮬레이터 -->
+      <section class="mb-6">
+        <!-- 공통 입력 -->
+        <div class="flex gap-2 mb-3">
+          <label class="flex-1 bg-gray-800 rounded-xl px-3 py-2 flex items-center gap-1.5">
+            <span class="text-[11px] text-gray-400 whitespace-nowrap">월지출</span>
+            <input id="ret-monthly-expense" type="number" min="50" max="3000" step="50" value="500"
+              class="flex-1 bg-transparent text-white text-sm font-bold text-right focus:outline-none w-0 min-w-0">
+            <span class="text-[11px] text-gray-400">만원</span>
+          </label>
+          <label class="flex-1 bg-gray-800 rounded-xl px-3 py-2 flex items-center gap-1.5">
+            <span class="text-[11px] text-gray-400 whitespace-nowrap">은퇴 시 부동산</span>
+            <input id="ret-realestate-eok" type="number" min="0" max="200" step="1" value="20"
+              class="flex-1 bg-transparent text-white text-sm font-bold text-right focus:outline-none w-0 min-w-0">
+            <span class="text-[11px] text-gray-400">억</span>
+          </label>
+        </div>
+        <!-- 카드 2개 -->
+        <div class="grid grid-cols-2 gap-3 mb-3">
+          <div class="bg-gray-800 rounded-2xl p-4">
+            <div class="text-[11px] text-gray-400 mb-2 leading-snug">지금 퇴사하면<br>재무유지가능기간</div>
+            <div id="quit-now-preview" class="text-sm text-gray-300">--</div>
+          </div>
+          <div class="bg-gray-800 rounded-2xl p-4">
+            <div class="text-[11px] text-gray-400 mb-2 flex items-center gap-1 flex-wrap leading-snug">
+              <input id="ret-age-input" type="number" min="40" max="75" value="55"
+                class="bg-gray-700 text-white text-xs font-bold w-10 text-center rounded px-1 py-0.5 focus:outline-none border border-gray-600">
+              <span>세 퇴직 시<br>재무유지가능기간</span>
+            </div>
+            <div id="retirement-preview"></div>
+          </div>
+        </div>
+        <!-- 수익률별 시나리오 테이블 -->
+        <div id="retirement-table-wrap" class="bg-gray-800 rounded-2xl p-4 overflow-x-auto"></div>
+      </section>
+
+      <!-- 은퇴 궤적 차트 -->
+      <section class="mb-6">
+        <h2 class="text-base font-semibold text-gray-300 mb-3">은퇴 궤적</h2>
+        <canvas id="chart-retirement-projection" height="160"></canvas>
+      </section>
+
+      <!-- 자산 현황 -->
+      <section class="mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-base font-semibold text-gray-300">자산 현황</h2>
+          <div class="text-xs text-gray-500" id="last-updated"></div>
+        </div>
+        <!-- 총자산·부채·자본 수치 -->
+        <div id="asset-overview" class="bg-gray-800 rounded-xl p-4 mb-3"></div>
+        <!-- 부채/자본 막대 -->
+        <div class="bg-gray-800 rounded-xl p-4 mb-3" style="height:90px">
+          <div class="text-xs text-gray-500 mb-2">부채 / 자본 비중</div>
+          <canvas id="chart-debt-equity" height="44"></canvas>
+        </div>
+        <!-- 포트폴리오 도넛 + 어드바이저 버튼 -->
+        <div class="bg-gray-800 rounded-xl p-4 mb-3">
+          <div class="text-xs text-gray-500 mb-2">자본 구성</div>
+          <canvas id="chart-allocation-current" height="160"></canvas>
+        </div>
+        <!-- 종목 목록 -->
+        <div id="holdings-list"></div>
+        <!-- 내 집 실거래가 -->
+        <div id="home-price-card" class="mt-3"></div>
+        <!-- 금 -->
+        <div id="gold-card" class="mt-3"></div>
+        <!-- 예금·적금 현황 (구글 시트 자동 연동) -->
+        <div id="deposits-section" class="mt-3"></div>
+        <!-- 업비트 코인 현황 -->
+        <div id="upbit-card" class="mt-3"></div>
+        <!-- 전월 대비 -->
+        <div class="text-sm mt-2" id="monthly-change"></div>
+      </section>
+
+    </div><!-- /tab-assets -->
+
+    <!-- ══════════════════════════════════════════════════════════
+         TAB 2: 씨앗모으기
+    ══════════════════════════════════════════════════════════ -->
+    <div id="tab-spend" class="hidden">
+
+      <!-- 씨앗 히어로 -->
+      <div id="seed-hero" class="mb-4"></div>
+      <!-- 소득/지출 입력 -->
+      <div id="seed-input-section" class="mb-4"></div>
+      <!-- 연간 추이 차트 -->
+      <div id="seed-trend-section"></div>
+
+    </div><!-- /tab-spend -->
+
+    <!-- ══════════════════════════════════════════════════════════
+         TAB 3: 씨앗불리기
+    ══════════════════════════════════════════════════════════ -->
+    <div id="tab-grow" class="hidden">
+
+      <!-- 부동산 Advisory (인라인) -->
+      <section class="mb-8">
+        <h2 class="text-base font-semibold text-gray-300 mb-3">🏠 부동산 Advisory</h2>
+        <div id="realestate-inline" class="bg-white rounded-2xl overflow-hidden min-h-[200px] text-gray-900">
+          <div class="p-6 text-center text-gray-400 text-sm">탭 클릭 시 로드됩니다</div>
+        </div>
+      </section>
+
+      <!-- 포트폴리오 Advisory (인라인) -->
+      <section class="mb-8">
+        <h2 class="text-base font-semibold text-gray-300 mb-3">📊 주식 Advisory</h2>
+        <div id="portfolio-inline" class="bg-white rounded-2xl overflow-hidden min-h-[200px]">
+          <div class="p-6 text-center text-gray-400 text-sm">탭 클릭 시 로드됩니다</div>
+        </div>
+      </section>
+
+    </div><!-- /tab-grow -->
+
+  </div><!-- /max-w-3xl -->
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

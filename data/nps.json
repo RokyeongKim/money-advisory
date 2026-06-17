@@ -1,0 +1,142 @@
+{
+  "updatedAt": "2024-12-31",
+  "reportPeriod": "2024년 4분기",
+  "totalFundKrw": 1181000000000000,
+  "assetAllocation": [
+    {
+      "category": "해외주식",
+      "pct": 31.2,
+      "color": "#8b5cf6"
+    },
+    {
+      "category": "국내채권",
+      "pct": 26.8,
+      "color": "#10b981"
+    },
+    {
+      "category": "대체투자",
+      "pct": 15.1,
+      "color": "#f59e0b"
+    },
+    {
+      "category": "국내주식",
+      "pct": 14.9,
+      "color": "#3b82f6"
+    },
+    {
+      "category": "해외채권",
+      "pct": 8.8,
+      "color": "#ef4444"
+    },
+    {
+      "category": "단기자금",
+      "pct": 3.2,
+      "color": "#6b7280"
+    }
+  ],
+  "topKrHoldings": [
+    {
+      "name": "삼성전자",
+      "pct": 8.51,
+      "shares": "7.5억주"
+    },
+    {
+      "name": "SK하이닉스",
+      "pct": 7.18,
+      "shares": "4.8억주"
+    },
+    {
+      "name": "LG에너지솔루션",
+      "pct": 6.9,
+      "shares": "0.99억주"
+    },
+    {
+      "name": "삼성바이오로직스",
+      "pct": 6.72,
+      "shares": "0.43억주"
+    },
+    {
+      "name": "POSCO홀딩스",
+      "pct": 6.45,
+      "shares": "0.47억주"
+    },
+    {
+      "name": "현대차",
+      "pct": 6.23,
+      "shares": "1.4억주"
+    },
+    {
+      "name": "LG화학",
+      "pct": 6.11,
+      "shares": "0.87억주"
+    },
+    {
+      "name": "셀트리온",
+      "pct": 5.89,
+      "shares": "0.72억주"
+    },
+    {
+      "name": "기아",
+      "pct": 5.73,
+      "shares": "2.3억주"
+    },
+    {
+      "name": "카카오",
+      "pct": 5.61,
+      "shares": "3.2억주"
+    }
+  ],
+  "source": "국민연금 기금운용본부 분기 공시",
+  "sourceUrl": "https://fund.nps.or.kr",
+  "news": [
+    {
+      "title": "[이로운전망]국민연금 1800조 시대, '노후 안전판'인가 '증시 뇌관'인가",
+      "date": "2026-05-25",
+      "source": "이로운넷",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1sRjByWGdyYk1hWk5xdVVJajdHVHZlejN2a2lTSEVmR3ZSQVNKSTVsNDhrT21YWHUtckhnT1Z1LU10LTFkLTJERWdOSDJmQndWUUk2T2VnVUVnREdNVFhfeG00Q3dmdw?oc=5"
+    },
+    {
+      "title": "28일 국민연금 기금위에 쏠린 눈…국내주식 비중 확대 전망",
+      "date": "2026-05-22",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE82YTVFdHhBNlJDWnRNdnI3WUhIdy1felZfNGh1SzRCSFNhTENfZmY1OHJ6aG04OTN5clp2R2V1c1N2dGJsak16alVISjFjaDhWT1FkOFMtckpndlXSAWBBVV95cUxPUnpMcnFiT0k5bHNXN3lReXpmdkhWeEU3UEVYQzM5TjAwWUVMdXdRb0RVOXRwLXlKN0hoZG9JOUlXbHU2OXNablM3dm85QlMxN3Jna0VPUU5rbDV4VzZtR20?oc=5"
+    },
+    {
+      "title": "“국민연금, 국내주식 보유 확대하나”…28일 기금위에 쏠린 눈",
+      "date": "2026-05-22",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1uSlZCQUM4N0s1ZXFzdTUwbkxUM1pJQy1IaTJjZzM4eS1NdlNiNGVxQVhDY0xlUmd4NnFaUkk3dXdkSWRxczRYSEhmQl83V2VOQkEtag?oc=5"
+    },
+    {
+      "title": "국민연금 1800조 육박…수익률 효자 국내주식 늘릴까?",
+      "date": "2026-05-22",
+      "source": "KBS 뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE50dVRsR2lmYXlBTTdaQUczN1pETkk3OVNad0JKVXhRVDg5Mlg0ai1jYVkwYjdWYjZYZ1Z2aVVzUXpsZ1dvWUYzbnZuX2hTYWdiVkVObTJWamVTNHc?oc=5"
+    },
+    {
+      "title": "국민연금, 국내주식 비중 늘릴까…기금위에 쏠린 눈",
+      "date": "2026-05-23",
+      "source": "v.daum.net",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9RTVhYd181UmZXajN4WThKVE5GX0tRUlRyZXZBNE1VdUoteEdRM3ZKODVEa3JyMmtVb0Nxbm5XQ3VRV3piZ2Y1ODRKUQ?oc=5"
+    },
+    {
+      "title": "“테크 고점 덜고 전력·정유 환승”...국민연금 13F가 보낸 신호",
+      "date": "2026-05-25",
+      "source": "중앙일보",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83emN0NUdodWVPZWdYaFJ3SE0zSGlpcjJSNEZLT0s0RHI3SVc1cFRRYTY2bHQ0VVVZSzBzZmtfVWRuWmxNSWx4YTRjNXpabHNmZEV6NGFR?oc=5"
+    },
+    {
+      "title": "국민연금 '국내주식' 비중 높일까",
+      "date": "2026-05-24",
+      "source": "중소기업신문",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE03R01ILTZtbW5ZNjlMTFl4VGM5bk1TVmUyUGZmZHV4MC0yMXMyaFpsQ05pc2NDX19NYTRJZC16SXZSUDc5bzNEY0JzNVBuZE9YZmxYc1hPR0JxcVVWRXVvTFFkMlFLMzFFampZSF9n?oc=5"
+    },
+    {
+      "title": "국민연금 국내주식 비중 늘리나...28일 기금위 결정 주목",
+      "date": "2026-05-23",
+      "source": "ebn.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5HYkN0X2xXeWRzLTFuU3d5c2ctc0J3SEotX2FMcEQyM3A3MFhObi1fcTZGWC1XeTdacHdSdjU1Xy1zMXh3Z1hHRENubUhiWURPME1NM1hFamxmcGFLUnZsVzBlZm1yMUIx?oc=5"
+    }
+  ],
+  "newsUpdatedAt": "2026-05-25"
+}

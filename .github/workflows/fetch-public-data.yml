@@ -1,0 +1,48 @@
+name: Fetch Public Data (Buffett/NPS/Mer)
+
+on:
+  schedule:
+    - cron: '0 22 * * 0'   # 매주 월요일 07:00 KST
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch Buffett 13F
+        run: python scripts/fetch_buffett.py
+
+      - name: Fetch Buffett News & Quotes
+        run: python scripts/fetch_buffett_news.py
+
+      - name: Fetch NPS Portfolio
+        run: python scripts/fetch_nps.py
+
+      - name: Fetch Mer Blog RSS
+        run: python scripts/fetch_mer_blog.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/buffett.json data/buffett_news.json data/nps.json data/mer_blog.json
+          git diff --cached --quiet || git commit -m "data: 버핏/국민연금/메르 자동 업데이트 $(date +'%Y-%m-%d')"
+          git push
