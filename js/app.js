@@ -1,5 +1,5 @@
 import { storage } from './storage.js';
-import { fetchAllAssets, fetchSpending, fetchDeposits, fetchHomePrice, fetchGold, fetchUpbitBalance } from './api.js';
+import { fetchAllAssets, fetchDeposits, fetchHomePrice, fetchGold } from './api.js';
 import { renderRealestateInline, setRealestateAssetCtx } from './realestate.js';
 import { renderPortfolioInline } from './portfolio.js';
 import {
@@ -24,8 +24,9 @@ let _dailyChartPayer = null;
 let _dailyChartsVisible = false;
 let _dailySelectedYM = null;
 
-const KNK_CATS = ['롯데카드', '하나복지', '네이버', '계좌이체', '현금', '기타'];
-const LCH_CATS = ['우리카드', '네이버', '현금', '계좌이체', '기타'];
+const KNK_CATS = ['카드', '이체', '현금', '기타'];
+const LCH_CATS = ['카드', '이체', '현금', '기타'];
+const saveToFirestore = () => {};  // Firebase 미사용 (localStorage만 사용)
 
 async function main() {
   const settings = storage.getSettings();
@@ -555,12 +556,12 @@ function renderDepositsSection(data) {
   const today = new Date().toISOString().slice(0, 10);
   const fmt = n => n >= 1e8 ? `₩${(n / 1e8).toFixed(1)}억` : `₩${Math.round(n / 1e4).toLocaleString()}만`;
   const typeColor = { '예금': '#3b82f6', '적금': '#10b981', '자유적금': '#6366f1', '입출금': '#9ca3af', '외화통장': '#f59e0b', '코인': '#f97316', '비트코인': '#f97316' };
-  const ownerColor = { '김노경': 'text-blue-400', '이창헌': 'text-purple-400' };
+  const ownerColor = { '나': 'text-blue-400', '배우자': 'text-purple-400' };
 
-  const GROUP_ORDER = ['김노경', '이창헌', '공동자산'];
+  const GROUP_ORDER = ['나', '배우자', '공동자산'];
   const byOwner = {};
   for (const item of data.items) {
-    const ownerKey = (item.owner === '김노경' || item.owner === '이창헌') ? item.owner : '공동자산';
+    const ownerKey = (item.owner === '나' || item.owner === '배우자') ? item.owner : '공동자산';
     (byOwner[ownerKey] = byOwner[ownerKey] || []).push(item);
   }
   const groups = GROUP_ORDER.filter(g => byOwner[g]);
@@ -570,8 +571,8 @@ function renderDepositsSection(data) {
     for (const item of data.items) {
       if (!excluded.has(iKey(item))) {
         total += item.amount;
-        if (item.owner === '김노경') knk += item.amount;
-        else if (item.owner === '이창헌') lch += item.amount;
+        if (item.owner === '나') knk += item.amount;
+        else if (item.owner === '배우자') lch += item.amount;
       }
     }
     return { total, knk, lch };
@@ -659,11 +660,11 @@ function renderDepositsSection(data) {
           <div class="text-base font-bold text-white" id="dep-total">${fmt(total)}</div>
         </div>
         <div class="flex-1 border-l border-gray-700">
-          <div class="text-[10px] text-gray-500 mb-0.5">김노경</div>
+          <div class="text-[10px] text-gray-500 mb-0.5">나</div>
           <div class="text-sm font-bold text-blue-400" id="dep-knk">${fmt(knk)}</div>
         </div>
         <div class="flex-1 border-l border-gray-700">
-          <div class="text-[10px] text-gray-500 mb-0.5">이창헌</div>
+          <div class="text-[10px] text-gray-500 mb-0.5">배우자</div>
           <div class="text-sm font-bold text-purple-400" id="dep-lch">${fmt(lch)}</div>
         </div>
       </div>
@@ -909,8 +910,8 @@ function renderSpendTab(ctx) {
           <thead>
             <tr>
               <th class="text-left text-gray-500 font-normal pb-0.5 pr-2" rowspan="2">월</th>
-              <th colspan="3" class="text-blue-400 text-center pb-0.5 border-b border-blue-800/40 pr-4">👤 김노경</th>
-              <th colspan="3" class="text-purple-400 text-center pb-0.5 border-b border-purple-800/40">👤 이창헌</th>
+              <th colspan="3" class="text-blue-400 text-center pb-0.5 border-b border-blue-800/40 pr-4">👤 나</th>
+              <th colspan="3" class="text-purple-400 text-center pb-0.5 border-b border-purple-800/40">👤 배우자</th>
             </tr>
             <tr>
               <th class="text-gray-500 font-normal py-1 pr-1 text-right text-[10px]">고정(만)</th>
@@ -930,12 +931,12 @@ function renderSpendTab(ctx) {
           <p class="text-[10px] text-gray-600">테이블에서 고정소득을 직접 입력하면 해당 월만 개별 적용됩니다. 공란이면 아래 급여 이력 기본값이 사용됩니다.</p>
           <div class="grid grid-cols-2 gap-2">
             <div>
-              <div class="text-[10px] text-blue-400 mb-1">김노경 (만원)</div>
+              <div class="text-[10px] text-blue-400 mb-1">나 (만원)</div>
               <input id="inp-knk-salary" type="number" value="${_latestSalEntry.knk}"
                 class="bg-gray-700 rounded px-2 py-1 text-white w-full text-right text-[11px] focus:outline-none focus:ring-1 focus:ring-blue-500" />
             </div>
             <div>
-              <div class="text-[10px] text-purple-400 mb-1">이창헌 (만원)</div>
+              <div class="text-[10px] text-purple-400 mb-1">배우자 (만원)</div>
               <input id="inp-lch-salary" type="number" value="${_latestSalEntry.lch}"
                 class="bg-gray-700 rounded px-2 py-1 text-white w-full text-right text-[11px] focus:outline-none focus:ring-1 focus:ring-purple-500" />
             </div>
@@ -950,8 +951,8 @@ function renderSpendTab(ctx) {
             <thead>
               <tr>
                 <th class="text-left text-[10px] text-gray-600 font-normal pb-0.5 pr-3">시작월</th>
-                <th class="text-[10px] text-blue-400/60 font-normal pb-0.5 pr-3 text-right">김노경</th>
-                <th class="text-[10px] text-purple-400/60 font-normal pb-0.5 pr-3 text-right">이창헌</th>
+                <th class="text-[10px] text-blue-400/60 font-normal pb-0.5 pr-3 text-right">나</th>
+                <th class="text-[10px] text-purple-400/60 font-normal pb-0.5 pr-3 text-right">배우자</th>
                 <th class="text-[10px] text-gray-500 font-normal pb-0.5 text-right">합계</th>
               </tr>
             </thead>
@@ -976,9 +977,9 @@ function renderSpendTab(ctx) {
           <thead>
             <tr>
               <th class="sticky left-0 bg-gray-800 z-10 text-left text-gray-400 pr-3 align-bottom pb-1" rowspan="2">월</th>
-              <th colspan="${KNK_CATS.length + 1}" class="text-blue-400 text-center pb-0.5 border-b border-blue-800/40">김노경</th>
+              <th colspan="${KNK_CATS.length + 1}" class="text-blue-400 text-center pb-0.5 border-b border-blue-800/40">나</th>
               <th></th>
-              <th colspan="${LCH_CATS.length + 1}" class="text-purple-400 text-center pb-0.5 border-b border-purple-800/40">이창헌</th>
+              <th colspan="${LCH_CATS.length + 1}" class="text-purple-400 text-center pb-0.5 border-b border-purple-800/40">배우자</th>
               <th class="text-green-400 text-center pb-0.5 border-b border-green-800/40 pl-1">TOTAL</th>
             </tr>
             <tr>
@@ -1177,7 +1178,7 @@ function renderDailyCharts(entries, CAT_COLORS) {
   const catAgg = {}, payerAgg = {};
   for (const e of entries) {
     const cat = e.category || '기타';
-    const payer = e.payer || '김노경';
+    const payer = e.payer || '나';
     catAgg[cat] = (catAgg[cat] || 0) + (e.amount || 0);
     payerAgg[payer] = (payerAgg[payer] || 0) + (e.amount || 0);
   }
@@ -1266,10 +1267,10 @@ function syncDailyToMonthly(ym) {
   const entries = all[ym] || [];
   const knkAgg = {}, lchAgg = {};
   for (const e of entries) {
-    const payer = e.payer || '김노경';
+    const payer = e.payer || '나';
     const method = e.payMethod || '';
     const amt = e.amount || 0;
-    if (payer === '김노경') {
+    if (payer === '나') {
       const key = KNK_CATS.includes(method) ? method : '기타';
       knkAgg[key] = (knkAgg[key] || 0) + amt;
     } else {
@@ -1302,7 +1303,7 @@ function renderDailySection(currentYM, _ctx) {
 
   const DAILY_CATS = ['쇼핑', '식재료', '생활용품', '외식', '간식', '선물', '구독료', '공과금', '보험료', '교통비', '통신비', '의료비', '기타', '김당고'];
   const PAY_METHODS = ['롯데카드', '하나복지', '고정비', '네이버', '현금', '계좌이체', '기타', '우리카드'];
-  const PAYERS = ['김노경', '이창헌'];
+  const PAYERS = ['나', '배우자'];
   const DAILY_KEY = 'daily_expenses';
   const monthLabel = `${parseInt(currentYM.slice(5))}월`;
   const CAT_COLORS = { '쇼핑': '#ec4899', '식재료': '#10b981', '생활용품': '#3b82f6', '외식': '#f97316', '간식': '#f59e0b', '선물': '#8b5cf6', '구독료': '#7c3aed', '공과금': '#06b6d4', '보험료': '#6366f1', '교통비': '#14b8a6', '통신비': '#0284c7', '의료비': '#0ea5e9', '기타': '#9ca3af', '김당고': '#ef4444' };
