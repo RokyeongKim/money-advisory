@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-05-15",
-  "quarter": "2026Q1",
-  "reportDate": "2026-03-31",
+  "updatedAt": "2026-08-14",
+  "quarter": "2026Q2",
+  "reportDate": "2026-06-30",
   "source": "SEC EDGAR 13F-HR (CIK: 0001067983)",
   "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001067983&type=13F&dateb=&owner=include&count=5",
   "totalValueUsd": 0,
