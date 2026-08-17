@@ -17,7 +17,12 @@ const K = {
   MANUAL_ASSETS: 'ad_manual_assets',
 };
 
+let _syncFn = null;
+const _sync = () => _syncFn?.();
+
 export const storage = {
+  setSyncCallback(fn) { _syncFn = fn; },
+
   getSettings() {
     return JSON.parse(localStorage.getItem(K.SETTINGS) || 'null') ?? {
       annualTargetAsset: 0,
@@ -40,6 +45,7 @@ export const storage = {
   },
   setSettings(data) {
     localStorage.setItem(K.SETTINGS, JSON.stringify(data));
+    _sync();
   },
 
   getTossAssets() {
@@ -49,6 +55,7 @@ export const storage = {
   },
   setTossAssets(data) {
     localStorage.setItem(K.TOSS_ASSETS, JSON.stringify(data));
+    _sync();
   },
 
   getTossSpending() {
@@ -58,6 +65,7 @@ export const storage = {
   },
   setTossSpending(data) {
     localStorage.setItem(K.TOSS_SPENDING, JSON.stringify(data));
+    // CSV는 대용량이므로 Firestore 동기화 제외
   },
 
   getSnapshots() {
@@ -67,6 +75,7 @@ export const storage = {
     const snaps = this.getSnapshots();
     snaps[yearMonth] = totalValue;
     localStorage.setItem(K.SNAPSHOTS, JSON.stringify(snaps));
+    _sync();
   },
 
   getCategorySnapshots() {
@@ -76,6 +85,7 @@ export const storage = {
     const snaps = this.getCategorySnapshots();
     snaps[yearMonth] = values;
     localStorage.setItem(K.CATEGORY_SNAPSHOTS, JSON.stringify(snaps));
+    _sync();
   },
 
   getStrategyCache() {
@@ -95,6 +105,7 @@ export const storage = {
   },
   setRealestateSettings(data) {
     localStorage.setItem(K.REALESTATE, JSON.stringify(data));
+    _sync();
   },
 
   getObSpending() {
@@ -102,6 +113,7 @@ export const storage = {
   },
   setObSpending(data) {
     localStorage.setItem(K.OB_SPENDING, JSON.stringify(data));
+    // CSV는 대용량이므로 Firestore 동기화 제외
   },
 
   getLocationSettings() {
@@ -114,6 +126,7 @@ export const storage = {
   },
   setLocationSettings(data) {
     localStorage.setItem(K.LOCATIONS, JSON.stringify(data));
+    _sync();
   },
 
   getTargetAllocation() {
@@ -125,6 +138,7 @@ export const storage = {
   },
   setTargetAllocation(data) {
     localStorage.setItem(K.TARGET_ALLOC, JSON.stringify(data));
+    _sync();
   },
 
   getNhHoldings() {
@@ -138,6 +152,7 @@ export const storage = {
     return JSON.parse(localStorage.getItem(K.UPBIT_KEYS) || 'null') ?? { accessKey: '', secretKey: '' };
   },
   setUpbitKeys(data) {
+    // API 키는 보안상 Firestore 동기화 제외
     localStorage.setItem(K.UPBIT_KEYS, JSON.stringify(data));
   },
 
@@ -156,14 +171,15 @@ export const storage = {
   },
   setReBudgetSettings(data) {
     localStorage.setItem(K.RE_BUDGET, JSON.stringify(data));
+    _sync();
   },
 
-  // ── 사용자 포트폴리오 (브라우저 localStorage에 저장) ──────────────────────
   getPortfolioKr() {
     return JSON.parse(localStorage.getItem(K.PORTFOLIO_KR) || 'null') ?? [];
   },
   setPortfolioKr(holdings) {
     localStorage.setItem(K.PORTFOLIO_KR, JSON.stringify(holdings));
+    _sync();
   },
 
   getPortfolioUs() {
@@ -171,9 +187,9 @@ export const storage = {
   },
   setPortfolioUs(holdings) {
     localStorage.setItem(K.PORTFOLIO_US, JSON.stringify(holdings));
+    _sync();
   },
 
-  // ── 수동 입력 자산 (예금합계, 아파트, 금) ──────────────────────────────────
   getManualAssets() {
     return JSON.parse(localStorage.getItem(K.MANUAL_ASSETS) || 'null') ?? {
       deposits: 0,
@@ -183,6 +199,7 @@ export const storage = {
   },
   setManualAssets(data) {
     localStorage.setItem(K.MANUAL_ASSETS, JSON.stringify(data));
+    _sync();
   },
 
   isFirstVisit() {

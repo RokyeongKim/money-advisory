@@ -13,6 +13,10 @@ import {
   renderDebtEquityBar,
 } from './charts.js';
 import { renderSettings } from './settings.js';
+import {
+  initFirebase, signInGoogle, signOutUser,
+  loadFromFirestore, saveToFirestore, subscribeSync, handleRedirectResult,
+} from './firebaseSync.js';
 
 let _seedBarsChart = null;
 let _trendMode = 'seed';
@@ -23,10 +27,10 @@ let _dailyChartCat = null;
 let _dailyChartPayer = null;
 let _dailyChartsVisible = false;
 let _dailySelectedYM = null;
+let _mainInitialized = false;
 
 const KNK_CATS = ['카드', '이체', '현금', '기타'];
 const LCH_CATS = ['카드', '이체', '현금', '기타'];
-const saveToFirestore = () => {};  // Firebase 미사용 (localStorage만 사용)
 
 async function main() {
   const settings = storage.getSettings();
@@ -1601,8 +1605,77 @@ function autoSnapshot(totalAsset, stocks, crypto, depositsTotal) {
   });
 }
 
+// ─── Firebase 인증 + 동기화 ───────────────────────────────────────────────────
+
+function updateAuthUI(user) {
+  const btn = document.getElementById('btn-sync');
+  if (!btn) return;
+  if (user) {
+    btn.textContent = '☁️';
+    btn.title = `동기화 중 (${user.email}) — 클릭하여 로그아웃`;
+    btn.classList.add('text-green-400');
+    btn.classList.remove('text-gray-400');
+  } else {
+    btn.textContent = '☁️';
+    btn.title = 'Google 로그인으로 데이터 동기화';
+    btn.classList.remove('text-green-400');
+    btn.classList.add('text-gray-400');
+  }
+}
+
+function showSyncToast(msg) {
+  let toast = document.getElementById('sync-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'sync-toast';
+    toast.className = 'fixed bottom-4 left-1/2 -translate-x-1/2 bg-gray-800 border border-gray-600 text-white text-xs px-4 py-2 rounded-full shadow-lg z-50 transition-opacity';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.style.opacity = '1';
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => { toast.style.opacity = '0'; }, 3000);
+}
+
 async function boot() {
+  // Firebase 초기화 (로그인 상태 복원)
+  const user = await initFirebase(async (u) => {
+    updateAuthUI(u);
+    if (u) {
+      storage.setSyncCallback(saveToFirestore);
+      const loaded = await loadFromFirestore();
+      if (loaded && _mainInitialized) {
+        // 이미 렌더된 상태에서 Firestore 데이터 로드됨 → 새로고침 알림
+        showSyncToast('☁️ 동기화 완료 — 페이지를 새로고침하면 반영됩니다');
+      } else if (loaded && !_mainInitialized) {
+        // 첫 로딩 시 Firestore 데이터로 시작
+      }
+      subscribeSync(() => {
+        showSyncToast('🔄 상대방이 데이터를 수정했습니다. 새로고침하면 반영됩니다.');
+      });
+    } else {
+      storage.setSyncCallback(null);
+    }
+  });
+
+  // 리다이렉트 로그인 결과 처리
+  await handleRedirectResult();
+
+  // 로그인 상태와 관계없이 앱 실행 (로컬 데이터 사용)
+  _mainInitialized = false;
   await main();
+  _mainInitialized = true;
+
+  // 로그인 버튼 이벤트
+  document.getElementById('btn-sync')?.addEventListener('click', async () => {
+    const btn = document.getElementById('btn-sync');
+    if (btn?.classList.contains('text-green-400')) {
+      await signOutUser();
+      showSyncToast('로그아웃되었습니다');
+    } else {
+      await signInGoogle();
+    }
+  });
 }
 
 boot().catch(console.error);
