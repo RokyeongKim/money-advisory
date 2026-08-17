@@ -90,28 +90,34 @@
   "sourceUrl": "https://fund.nps.or.kr",
   "news": [
     {
+      "title": "“기금운용 전문가 30명 선발”… 국민연금, 제2차 자산운용역 공개모집",
+      "date": "2026-08-17",
+      "source": "전민일보",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBIRlBsSW95SmFEWm9maWVCNHFiTU4zOXJfWUduY2VpRlRGd3RzVTJlMkFVTkNTc0NWWXRtV0RoQjNScmg3dGpZWUZKWExLY1NvTHdsc0JLOEcxTWRtZUN1bXFVdDhwUQ?oc=5"
+    },
+    {
+      "title": "SK하닉 1.5조 사더니…국민연금이 '9600억 주식' 판 회사",
+      "date": "2026-08-17",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSQjNGYld2S0dOUlFSdUhNVE92M0hTWW1RNEdiTHNQaVVsUUdhd1hZUzdFSFVyYXN3bjdXcGRlRUs1dEF1Q0VTTjBkMlJudTRSSXVCdDctNGxBZw?oc=5"
+    },
+    {
+      "title": "SK하닉 1.5조 사더니…국민연금이 '9600억 주식' 판 회사",
+      "date": "2026-08-17",
+      "source": "블루밍비트",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBzN1NLTFV5ME1RRmxSeml0Tk9VSkloZXNrZmdVZWRtS3JPRm1ZM2dEaWJVUzIzYnFmOHYtMFNMclBWbnQ2Mmk3c0wyQl9qMXhr?oc=5"
+    },
+    {
+      "title": "[국민연금 CIO 숏리스트] 미래에셋맨 김호진…23조 국토부 주택기금 주물러 : 네이버 블로그",
+      "date": "2026-08-17",
+      "source": "Naver Blog",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUTBoTkNQNTVHeDYzWTJtcW9iUm1WTDBVYzJsSXhCUlFXT19USVdKSXFHMFNERjNnTHF5Q0lNSS04LTRQUDlmSUI3bXRnQWZfaXMxRWpNZ0xobnd6TVZNeFdtVVJhN2tFQVlkM0c5d2gzUWZPcVI0aDNWOVdudWp4WkhaQzlJejVBRTJjTWMtRQ?oc=5"
+    },
+    {
       "title": "국민연금 이사장 “2분기 미국주식 평가가치 17.8% 증가”",
       "date": "2026-08-16",
-      "source": "브릿지경제",
+      "source": "viva100.com",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE14SHdyaFByTUNLREM2NWNmVENCLXVRQXJTY2JjM3lxRHZUNno5WlhoSUh4U1U5WHM5bngtTkFMQnQ5al8xLTh1N0xzNzY5Ym5qc0wtOTRXc2pHZw?oc=5"
-    },
-    {
-      "title": "국민연금공단, 기금 운용 전문가 30명 공개채용",
-      "date": "2026-08-16",
-      "source": "전북제일신문",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE02cy1XMjI3MUFCUlh0SmtCSVZpVDVtM0hsbmZqUTJKbnowX2U1bW5QRXZ3UW9YUHRhM0pWMkNvVzJ6ZmQ1Nm05VVh0NWJDM3YwWlBjRmlzejRkN24ydTVZUlFkOGhINUJWWXc?oc=5"
-    },
-    {
-      "title": "리밸런싱도 버거운 ‘국민연금’… 퇴직연금까지 맡겨도 될까 [김병철의 연금술]",
-      "date": "2026-08-16",
-      "source": "sisajournal.com",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1TSk9Jd1FvZnhURkozYjRRNzhZMFBvWDJtTXhSUjYyUGZjeWpQakdNNGg1bDJiWGwwN3FRV2lVS0s0M294cTU2TFRQbzhRb09NUHRSVXhuOVJOUUJoNWRxcDBXOHFWckRqb096cy1sONIBc0FVX3lxTE5LZG9fek9jX05VUWpGbTNSZWp4cFpGaTZSVktzVk81cm15SGJrczZLNmhLWWQ4bTktUTliMDVnS3kyRjBiRWg0aXRINDZjc2R0ZmpUS09DSWQwNTF4d1pGdm1nUXMyanhQVXRKLWllenJhZ3c?oc=5"
-    },
-    {
-      "title": "“국민연금이 국내 주식 바닥 받치고 환율 방어? 완전히 틀렸다···목적은 국민 노후 보장 딱 하나뿐”",
-      "date": "2026-08-11",
-      "source": "경향신문",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1MVzY1bmxuVUlPRXliT3pPaTBGNXJkRWY1b19veHlyZzR3OTJGWEJvZ3ZXeUhJUkdOeERpZTc5aGdQVDJjT2RpcVBCTDdKdjkxSV9zdG82UHg5Z9IBX0FVX3lxTFBDUHozdkkyQnFfRGtEbjAzRW84eU5KRFRYRjdLT1pfYXp3dXRkOWNrSXRCcGcwVklVU1lMalNEUXhmWGplNDRFWmpocUhjRFZPNGdReThjdDduRmFKQWxR?oc=5"
     },
     {
       "title": "국민연금, 2분기 美주식 평가액 전분기 대비 33조원 급증",
@@ -120,22 +126,16 @@
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1OS05UcjByN0h2a0dtTlZRZnhHZnE3NDBMWk1ETTJycnVaVHFxSDIzWDRtVVV5NUMzeUlhMUluQVBIcng4ZFpZcFBBdk5kTTN6VGI0aUhQODFpM2vSAWBBVV95cUxNOXp2NUstNElTeE82bWFQM2FTYmlPUXMwcmhlT1JuT2daMXJNR1B6VHl1U1E0M1lNaDNrZVcwMHV5ZmRSUkwzeUUtVDdHX2ZzZGI3WnY5VWtvb19hS2thZGM?oc=5"
     },
     {
+      "title": "“국민연금이 국내 주식 바닥 받치고 환율 방어? 완전히 틀렸다···목적은 국민 노후 보장 딱 하나뿐”",
+      "date": "2026-08-11",
+      "source": "khan.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1MVzY1bmxuVUlPRXliT3pPaTBGNXJkRWY1b19veHlyZzR3OTJGWEJvZ3ZXeUhJUkdOeERpZTc5aGdQVDJjT2RpcVBCTDdKdjkxSV9zdG82UHg5Z9IBX0FVX3lxTFBDUHozdkkyQnFfRGtEbjAzRW84eU5KRFRYRjdLT1pfYXp3dXRkOWNrSXRCcGcwVklVU1lMalNEUXhmWGplNDRFWmpocUhjRFZPNGdReThjdDduRmFKQWxR?oc=5"
+    },
+    {
       "title": "국민연금, 기금 운용역 30명 공개모집…28일까지 서류 접수",
       "date": "2026-08-14",
       "source": "연합인포맥스",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE42aWR2TERHSXRKMy1DX1FOa25Iam9ETTlFVjdUcDhwYUhXSDNaS3R1UjBhRi1raUhtYlpXOHhZVzUzOFd5YmUyQkJHSGJSQUk0QllBNzNCcEI4QlRoSExDQmhoYXhiX081NlJjejI2N1Q?oc=5"
-    },
-    {
-      "title": "“‘삼전닉스’는 알겠는데” 국민연금이 싹쓸이한 ‘이 주식’…40→7위, 껑충 뛰었다[투자360]",
-      "date": "2026-08-16",
-      "source": "헤럴드경제",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IQWVFRmhEQ3FGbUN6NTQ1OU1maU9DdDkxWWhYWWp1ekxVOGQ4bGhIOHljU2xQczJIVnpwaDRPVXl2Ym1pcUtOWEl2TzZua0pObk10YzNR?oc=5"
-    },
-    {
-      "title": "국민연금 美주식 평가액 18% 급증… 엔비디아 줄이고 스페이스X 담았다 - 조선비즈",
-      "date": "2026-08-14",
-      "source": "Chosunbiz",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUF8wazh4RzE3MnRVMHA4MTdiVEhWOEhEc0RoN0xIdEtIZDRnX3VhRnhiSUJnSlRSVDRKME9NRUJaZWZ2QlI2N3dZMjRZcTRETE8zMWczZTlKQzhXYm5rc2k4TEktSDVtT3IxSVExTnFrWFRkUElDUGx6aEV0QW81a2pjTWpJVk520gGcAUFVX3lxTE9lbzdwSjVmc0NIQ1RGZWNGNkFUbHRRSHZWYnFzR2pvQTRDdFBnWWY5WUhVQ2J6MDFSY0UxV1hXYTd3MW9lem9tR1hqbnMzNmNMVzZQYnVhUUN3aTAxanlPVDVDS3ZhZkVvZXU0UWNoYjB0QlhDXzZYMWhiMEVlQm9DZ05FNzNHU1hnNDZvYUkxakwyU0VGb28tT1JENw?oc=5"
     }
   ],
   "newsUpdatedAt": "2026-08-17"
